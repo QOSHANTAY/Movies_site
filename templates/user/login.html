@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+<!-- <form method="post">
+    {% csrf_token %}
+    {{ forms.as_p }}
+    <input type="submit" value="Logging in">
+
+
+</form> -->
+
+
+
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<div class="wrapper">
+    <form method="post">
+        {% csrf_token %}
+        <h2>Log in</h2>
+        <div class="input-field">
+            <input type="text" required name="username">
+            <label>Enter your Name</label>
+        </div>
+        <div class="input-field">
+            <input type="password" name="password"  required>
+            <label>Enter your password</label>
+        </div>
+        <br>
+        <button type="submit" value="Registrate">Log in</button>
+    </form>
+</div>
+{% endblock %}
